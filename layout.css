@@ -1,0 +1,178 @@
+body
+	{
+		background-color:#F8F8F8; /*sets the color of the background*/
+		color:black;
+		padding: 0;
+		margin: 0px
+	}
+/*specifies the styles to be applied to the elements in the div tag named "navigation"*/
+#navigation
+	{
+		width:100%;
+		background:#404040;
+		height: 40px;
+		top:0px;
+		position:fixed;
+		padding:1px;
+	}
+/*CSS styles to be applied to the elements within the ul tag*/
+#navigation ul
+	{
+		font-family:Helvetica, sans-serif;
+		text-align:right;
+		text-transform: uppercase;
+		position:relative;
+		margin-right: 60px;
+		font-weight: bold;
+	}
+
+#navigation ul li
+	{
+		display: inline-block;
+	}
+
+#navigation ul li a, #navigation ul li a:after, #navigation ul li a:before 
+	{
+		transition: all .5s;
+	}
+/*this applies the transition time and styles on the ul links when they are not active*/
+#navigation ul li a
+	{
+		position: relative;
+		color:white;
+		text-decoration:none; 
+		padding:0.5em;
+		transition: all 2s;
+	}
+
+#navigation ul li a:after 
+	{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 0%;
+		content: '.';
+		color: transparent;
+		background: #F8F8F8;
+		height: 5px;
+		text-align: left;
+		content: '.';
+		margin: 0;
+		opacity: 0;
+	}
+/*this applies the CCS3 styles when the user hovers over links in the navigation tag*/
+#navigation ul li a:hover 
+	{
+		color: #1aa3ff;
+		z-index: 1;
+	}
+/*this applies the CCS3 styles animations after the user hovers over a link*/
+#navigation ul li a:hover:after 
+	{
+		z-index: -10;
+		animation: fill 1s forwards;
+		-webkit-animation: fill 1s forwards;
+		-moz-animation: fill 1s forwards;
+		opacity: 1;
+	}	
+/* Keyframes for the navigation fill animations*/
+@-webkit-keyframes fill 
+	{
+		0% 
+		{
+			width: 0%;
+			height: 1px;
+		}
+		50% 
+		{
+			width: 100%;
+			height: 1px;
+		}
+		100% 
+		{
+			width: 100%;
+			height: 100%;
+			background: #1a1a1a;
+		}
+	}
+/*CSS3 styles applied to the image in the header tag*/	
+header img
+	{
+		max-width: 100%;
+		width:100%;
+		height:450px;
+		background-repeat: no-repeat;
+		background-size: cover;  
+		padding:0;
+	}
+/*flex container changes the display of the elements to flex*/
+.flexContainer
+	{
+		display:flex;
+		flex-flow: row wrap;
+	}
+/*flex box named 'main' which has the first order, the width is not specified and will vary with screen size*/	
+.main
+	{
+		order:1;
+		flex:1;
+		min-height:400px;
+		background-color:white;
+		padding:10px;
+		margin-left:75px;
+	}
+/*CSS3 styles applied to the text in the h1 tag within the div tag with the identifier 'intro'*/
+#intro h1
+	{
+		padding:1px;
+		color:black;
+		text-align:center;
+		font-family:Helvetica, sans-serif;
+		font-size: 30px;
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+/*flex box named 'aside' which has the second order, the width is specified to be 250 px as well as the background color is set to a shade of blue*/	
+.aside
+	{
+		order:2;
+		flex: 0 1 250px;
+		background-color:#b3d9ff;
+	}
+/*the footer is a flex box which has the third order withing the flex container, the width is specified to be 100% and the height 100px*/	
+.footer
+	{
+		order:3;
+		flex:0 1 100%;
+		height:100px;
+		background-color:#D8D8D8;
+		text-align:center;
+	}
+/*CCS3 styles to be applied to the text in the form, setting the alignment*/
+	form
+	{
+		text-align:left;
+	}
+/*specifies the styles to be applied to the text in the <h3> tags withing the form*/
+	form h3
+	{
+		font-family:Helvetica, sans-serif;
+		text-transform: uppercase;
+		font-size: 25px;
+		font-weight: 800;
+		
+	}
+/*sets the color of links to black and removes and text decoration*/		
+footer a
+	{
+		text-decoration:none;
+		color:black;
+	}
+/*this changes the color and font size of links in the footer tag when the user hovers over them*/	
+footer a:hover
+	{
+		color:#1aa3ff;
+		font-style: italic;
+	}

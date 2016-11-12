@@ -1,0 +1,112 @@
+<!--Geovane Morgan, ID 1001046-->
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Dare</title>	<!--Webpage title-->
+		<meta charset = "UTF-8"/> <!--Meta tags-->
+		<meta name = "Author" content = "Geovane Morgan"/>
+		<meta name = "keywords" content = "html, css, javascript, dare, form"/>
+		<meta name = "Description" content = "Dare Form"/>
+		<link rel="stylesheet" type="text/css" href="layout.css"/> <!--Link to external CSS style sheet created in head-->
+		<script src="script.js" type="text/javascript"></script> <!--Link to external javascript functions sheet created in head-->
+	</head> 
+	
+	<body>
+	<div id="navigation">
+		<ul>
+			<li><a href="index.html">Truth</a></li>
+			<li><a href="dareform.html">Dare</a></li>
+		</ul>
+	</div>
+	<a id="top"></a>
+	<header>
+		<img src="Images/header1.jpg"/>
+	</header>
+	<div class="flexContainer"> <!--A flex container is used to organize the layout of the page-->
+	<main class="main">
+		<div id="intro"> 
+		<h1>Dare</h1>
+		<p>Complete the form to play a game of dare with an unlucky victim, input your information and 
+		complete the form with the email address of your victim.</p>
+		</div>
+		<form name="userForm" onsubmit="return validateForm()" method="post"> <!--the form contains the fields that in which the user will input data-->
+			<h3>Instigator</h3>
+			<label>First Name&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" name="firstname" size ="30" maxlength="40" placeholder ="First name"></input>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label>Last Name</label>
+			<input type="text" name="lastname" size ="30" maxlength="40" placeholder ="Last name"></input>
+			<br/>
+			<br/>
+			<label>Email Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="email" name="inemail"size ="40" maxlength="50"></input>
+			<br/>
+			<br/>
+			<label>Gender</label>	
+			<input type="radio" name="gender" value="male" checked>Male</input>
+			<input type="radio" name="gender" value="female">Female</input>
+			<br/>
+			<br/>
+			<label>Age</label>
+			<input type="number" name="age"></input>
+			<br/>
+			<br/>
+			<label>Weight </label> <input type="number" id="weight" step="any"/>
+			<select type="multiple" id="weightUnits">
+            <option value="kg" selected="selected">kilograms</option>
+            <option value="lb">pounds</option>
+			</select>		
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label>Height (meters):</label>  
+			<input type="number" name="height" step="any"></input>
+			<br/>
+			<br/>
+			<input type="button" value="Calculate BMI" onClick="calculateBmi()">
+			<br/>
+			</br>
+			Your BMI: <input type="text" name="bmi" size="10">
+			<br/>
+			</br>
+			Classification: <input type="text" name="output" size="25">
+			<br/>
+			<h3>Victim</h3>
+			<label>Email Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="email" name="vicemail"size ="40" maxlength="50"></input>	
+			<br/>
+			<br/>
+			<label>Date for dare to be performed&nbsp;</label>
+			<input type="date" name="date"></input>
+			
+			<p>Select one or more of following things to dare the victim to complete:</p>
+			<input type="checkbox" name="dare[]" value="dare1">Drink half cup of sulphur bitters <br/> <!--Items in a checkbox list-->
+			<input type="checkbox" name="dare[]" value="dare2">Eat a spoon-full of cinnamon <br/>
+			<input type="checkbox" name="dare[]" value="dare3">Take two shots of vodka  <br/>
+			<input type="checkbox" name="dare[]" value="dare4">Give yourself a haircut <br/>
+			<input type="checkbox" name="dare[]" value="dare5">Burp as loudly as you can<br/>
+			<input type="checkbox" name="dare[]" value="dare6">Imitate a monkey as best as you can<br/>
+			<input type="checkbox" name="dare[]" value="dare7">Ask a random stranger for their number <br/>
+			<input type="checkbox" name="dare[]" value="dare8">Dance wildly to your favorite song<br/>
+			<input type="checkbox" name="dare[]" value="dare9">Do a headstand for one minute<br/>
+			<input type="checkbox" name="dare[]" value="dare10">Bark like a dog for two minute<br/>
+			<br/>
+			<input type="submit" value="Submit"/>
+			<br/><br/>
+			<input type= "reset" value= "Clear Fields"/> <!--on click, it will clear the data entered into the fields-->
+			</form>
+			<br/>
+			<br/>
+		</main>
+	
+		<aside class="aside"> <!--the aside is formatted as flex box and will be aligned at the right side of the webpage as a side bar-->
+		</aside>
+	
+		<footer class="footer"> <!--the footer is formatted as a flex box and will appear at the bottom of the page-->
+			<br/>
+			<a href = "#top">Go to top of page</a> <!--Link to go to the top of the page-->
+			<br/>
+			<br/>
+			Copyright &copy;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:morgangeovane@gmail.com">Geovane Morgan</a>, 2016
+		</footer>
+	</div>
+	</body>
+</html>
